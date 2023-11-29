@@ -44,3 +44,66 @@ console.log(Math.pow(2, 4));
 console.log(Math.random());  //0-1
 console.log(Math.random() * (10 - 1) + 1);  //1-10
 
+// String
+
+let result;
+result = 5 + 5 + '5';
+console.log(result);
+console.log(typeof result);
+const num = 55;
+result = `${num} cars`
+console.log(result);
+
+// методи строк
+
+// length -довжина
+// indexOf()
+// includes()
+// toLowerCase()
+// toUpperCase()
+
+const message = 'Hello, I am Natalia';
+console.log(message.length);
+console.log(message.toLowerCase());
+console.log(message.toUpperCase());
+console.log(message.indexOf('t'));
+console.log(message.indexOf('cat'));
+console.log(message.includes('hello'));
+console.log(message.includes('Hello'));
+
+// BigInt
+
+const a = 54789214569586256n;
+console.log(typeof a);
+
+
+// Об"єкти і їх методи
+
+const obj = {
+    name: "Natalia",
+    age: 38, "like cats": true,
+}
+
+console.log(obj['like cats']);
+delete obj['like cats'];
+console.log(obj);
+
+const user = {};
+user.name = 'Mango';
+user.color = 'orange';
+console.log(user);
+
+// for_in
+// for (key in object)
+
+let cat = {
+    name: 'Marcus',
+    color: 'orange',
+    age: 1.5,
+};
+
+for (let key in cat) {
+    console.log(key);
+    console.log(cat[key]);
+};
+
