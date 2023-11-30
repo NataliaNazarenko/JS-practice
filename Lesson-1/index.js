@@ -42,6 +42,7 @@ console.log(Math.max(10, 50, 40, 3, 5));
 console.log(Math.min(34, 28, -8, 45, 97));
 console.log(Math.pow(2, 4));
 console.log(Math.random());  //0-1
+// console.log(Math.random() * (max - min) + min);
 console.log(Math.random() * (10 - 1) + 1);  //1-10
 
 // String
@@ -105,5 +106,17 @@ let cat = {
 for (let key in cat) {
     console.log(key);
     console.log(cat[key]);
+};
+
+let codes = {
+    41: 'cat',
+    58: 'dog',
+    3: 'mango',
+    64: 'poly',
+    24: 'ben',
+};
+
+for (let code in codes) {
+    console.log(code);
 };
 
