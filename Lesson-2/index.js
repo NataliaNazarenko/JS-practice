@@ -94,14 +94,129 @@
 
 // or || оператор або
 
-console.log(5 + 5 === 25 || 2 + 2 === 6);
-console.log(5 * 5 === 25 || 2 * 2 === 6);
-console.log(5 + 5 === 25 || 2 * 2 === 6);
-console.log(5 * 5 === 25 || 2 + 2 === 6);
+// console.log(5 + 5 === 25 || 2 + 2 === 6);
+// console.log(5 * 5 === 25 || 2 * 2 === 6);
+// console.log(5 + 5 === 25 || 2 * 2 === 6);
+// console.log(5 * 5 === 25 || 2 + 2 === 6);
 
 
+// not ! оператор ні
+
+// console.log(!true);
 
 
+// умови if/else
 
+// if (5 + 5 === 25) {
+//     console.log("OK");
+// };
+
+// if (5 * 5 === 25) {
+//     console.log('OK');
+// };
+
+// if (5 + 5 === 25) {
+//     console.log("OK");
+// } else {
+//     console.log("NOT");
+// };
+
+// if (5 * 5 === 25) {
+//     console.log("OK");
+// } else {
+//     console.log("NOT");
+// };
+
+// if (5 + 5 === 25) {
+//     console.log("NOT");
+// } else if (5 * 5 === 25) {
+//     console.log("OK");
+// } else {
+//     console.log("UPS");
+// }
+
+// тернарний оператор
+
+// console.log(5 * 5 === 25 ? "OK" : "NOT");
+// console.log(5 + 5 === 25 ? "OK" : "NOT");
+
+// умова switch/case
+
+// let cost = null;
+// const sub = 'pro';
+
+// switch (sub) {
+
+//     case "free":
+//         cost = 0;
+//         break;
+
+//     case "pro":
+//         cost = 200;
+//         break;
+
+//     case "premium":
+//         cost = 500;
+//         break;
+
+//     default:
+//         console.log("Not sub");
+//         break;
+// }
+
+// console.log(cost);
+
+// Задача 1
+
+// const min = prompt("Введіть хвилини до 60");
+
+// if (min >= 0 && min <= 14) {
+//     console.log("Перша чверть");
+// } else if (min >= 15 && min <= 29) {
+//     console.log("Друга чверть");
+// } else if (min >= 30 && min <= 44) {
+//     console.log("Третя чверть");
+// } else if (min >= 45 && min <= 60) {
+//     console.log("Четверта чверть");
+// } else {
+//     console.log("Це більше ніж одна хвилина");
+// };
+
+// Задача 2
+
+const value = prompt("Введіть назву фрукта").toLowerCase();
+let cost;
+
+switch (value) {
+
+    case "яблуко":
+        cost = 10;
+        alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
+        break;
+
+    case "груша":
+        cost = 20;
+        alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
+        break;
+
+    case "слива":
+        cost = 50;
+        alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
+        break;
+
+    case "банан":
+        cost = 50;
+        alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
+        break;
+
+    case "персик":
+        cost = 100;
+        alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
+        break;  
+
+    default:
+       alert(`Товару ${value} - немає в наявності`);
+    break;
+}
 
 
