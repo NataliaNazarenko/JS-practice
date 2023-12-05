@@ -184,39 +184,39 @@
 
 // Задача 2
 
-const value = prompt("Введіть назву фрукта").toLowerCase();
-let cost;
+// const value = prompt("Введіть назву фрукта").toLowerCase();
+// let cost;
 
-switch (value) {
+// switch (value) {
 
-    case "яблуко":
-        cost = 10;
-        alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
-        break;
+//     case "яблуко":
+//         cost = 10;
+//         alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
+//         break;
 
-    case "груша":
-        cost = 20;
-        alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
-        break;
+//     case "груша":
+//         cost = 20;
+//         alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
+//         break;
 
-    case "слива":
-        cost = 50;
-        alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
-        break;
+//     case "слива":
+//         cost = 50;
+//         alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
+//         break;
 
-    case "банан":
-        cost = 50;
-        alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
-        break;
+//     case "банан":
+//         cost = 50;
+//         alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
+//         break;
 
-    case "персик":
-        cost = 100;
-        alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
-        break;  
+//     case "персик":
+//         cost = 100;
+//         alert(`Товар ${value} - коштує ${cost} гривень за 1 кг`);
+//         break;  
 
-    default:
-       alert(`Товару ${value} - немає в наявності`);
-    break;
-}
+//     default:
+//        alert(`Товару ${value} - немає в наявності`);
+//     break;
+// }
 
 
