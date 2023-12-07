@@ -1,12 +1,12 @@
 // області видимості
 
-const s = 10;
-console.log(s);  //global
+// const s = 10;
+// console.log(s);  //global
 
-if (true) {
-    const d = 5;
-    console.log(d);  //block
-};
+// if (true) {
+//     const d = 5;
+//     console.log(d);  //block
+// };
 
 // цикли while/do_while/for
 
@@ -55,11 +55,67 @@ if (true) {
 
 // масиви
 
-let arr = ["Apple", "Orange", "Banana"];
+// let arr = ["Apple", "Orange", "Banana"];
 
-arr[2] = "Lemon";
-arr[3] = "Cherry";
-console.log(arr[1]);
-console.log(arr);
-console.log(arr.length);
+// arr[2] = "Lemon";
+// arr[3] = "Cherry";
+// console.log(arr[1]);
+// console.log(arr);
+// console.log(arr.length);
+
+// arr.push('Tomato');
+// console.log(arr);
+
+// arr.pop();
+// console.log(arr);
+
+// arr.shift();
+// console.log(arr);
+
+// arr.unshift('Kiwi');
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i+=1) {
+//     const element = arr[i];
+//     console.log(element);
+// };
+
+// for (let item of arr) {
+//     const items = item;
+//     console.log(items);
+// };
+
+// for (let key in arr) {
+//     console.log(arr[key]);
+//     console.log(key);
+// };
+
+// let matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+// ];
+
+// console.log(matrix[0][2]);
+
+// методи присвоєння - прості за значенням, складні за посиланням
+
+// let a = 5;
+// let b = a;
+
+// a = 10;
+
+// console.log(b);
+// console.log(a);
+
+// const arr = [1, 2, 3];
+// const arr2 = arr;
+// arr.push(4);
+// console.log(arr);
+// console.log(arr2);
+
+// методи масиву
+
+
+
 
