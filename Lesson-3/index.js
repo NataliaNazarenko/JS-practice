@@ -116,6 +116,29 @@
 
 // методи масиву
 
+let array = ['a', 'b', 'c', 'd', 'f'];
 
+// array.splice(3, 1);
+// array.splice(1, 2);
+// console.log(array);
 
+// console.log(array.slice(1, 3));
+// console.log(array.slice(1, 2));
+// console.log(array.slice(1, 4));
+
+let arr = [1, 2, 3, 4, 5];
+
+// console.log(array.concat(arr));
+
+// console.log(arr.indexOf(4));
+// console.log(array.indexOf('c'));
+// console.log(array.indexOf('b', 3));
+// console.log(array.indexOf('b', 1));
+// console.log(array.indexOf('b'));
+
+// console.log(array.lastIndexOf('d', 4));
+// console.log(array.lastIndexOf('d', 1));
+
+console.log(array.includes('c'));
+console.log(arr.includes(7));
 
