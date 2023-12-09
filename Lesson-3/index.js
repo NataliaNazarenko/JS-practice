@@ -142,3 +142,25 @@ let arr = [1, 2, 3, 4, 5];
 console.log(array.includes('c'));
 console.log(arr.includes(7));
 
+const fruts = [
+    {id: 0, name: 'apple'},
+    {id: 1, name: 'orange'},
+    {id: 2, name: 'kiwi'},
+    {id: 3, name: 'banana'},
+    {id: 4, name: 'mango'},
+    {id: 5, name: 'cherry'},
+];
+
+console.log(fruts.find(frut => frut.id === 2));
+console.log(fruts.filter(frut => frut.id > 2));
+
+let result = fruts.map(frut => frut.name.length);
+console.log(result);
+
+let name = 'Olga, Anna, Nata, Margo, Oleh';
+let arr2 = name.split(', ');
+console.log(arr2);
+
+let newString = arr2.join(', ');
+console.log(newString);
+
