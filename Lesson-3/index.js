@@ -116,7 +116,7 @@
 
 // методи масиву
 
-let array = ['a', 'b', 'c', 'd', 'f'];
+// let array = ['a', 'b', 'c', 'd', 'f'];
 
 // array.splice(3, 1);
 // array.splice(1, 2);
@@ -126,7 +126,7 @@ let array = ['a', 'b', 'c', 'd', 'f'];
 // console.log(array.slice(1, 2));
 // console.log(array.slice(1, 4));
 
-let arr = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 
 // console.log(array.concat(arr));
 
@@ -139,28 +139,39 @@ let arr = [1, 2, 3, 4, 5];
 // console.log(array.lastIndexOf('d', 4));
 // console.log(array.lastIndexOf('d', 1));
 
-console.log(array.includes('c'));
-console.log(arr.includes(7));
+// console.log(array.includes('c'));
+// console.log(arr.includes(7));
 
-const fruts = [
-    {id: 0, name: 'apple'},
-    {id: 1, name: 'orange'},
-    {id: 2, name: 'kiwi'},
-    {id: 3, name: 'banana'},
-    {id: 4, name: 'mango'},
-    {id: 5, name: 'cherry'},
-];
+// const fruts = [
+//     {id: 0, name: 'apple'},
+//     {id: 1, name: 'orange'},
+//     {id: 2, name: 'kiwi'},
+//     {id: 3, name: 'banana'},
+//     {id: 4, name: 'mango'},
+//     {id: 5, name: 'cherry'},
+// ];
 
-console.log(fruts.find(frut => frut.id === 2));
-console.log(fruts.filter(frut => frut.id > 2));
+// console.log(fruts.find(frut => frut.id === 2));
+// console.log(fruts.filter(frut => frut.id > 2));
 
-let result = fruts.map(frut => frut.name.length);
-console.log(result);
+// let result = fruts.map(frut => frut.name.length);
+// console.log(result);
 
-let name = 'Olga, Anna, Nata, Margo, Oleh';
-let arr2 = name.split(', ');
-console.log(arr2);
+// let name = 'Olga, Anna, Nata, Margo, Oleh';
+// let arr2 = name.split(', ');
+// console.log(arr2);
 
-let newString = arr2.join(', ');
-console.log(newString);
+// let newString = arr2.join(', ');
+// console.log(newString);
 
+// let value = arr.reduce( function (accumulator, item, index, array){
+// ......
+// }, [initial])
+
+// let value = [1, 2, 3, 4, 5, 6]
+// let result = value.reduce((summ, item) => summ + item);
+// console.log(result);
+
+// let array2 = [21, 25, 13, 84, 65, 106]
+// let result = array2.reduce((summ, item) => summ + item) / array2.length;
+// console.log(Math.round(result * 10) / 10);
