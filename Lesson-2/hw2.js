@@ -1,14 +1,14 @@
 // 1 task - // Якщо змінна більше нуля - виведіть true, менше - false
 //Перевірте це на варіантах 1, 0, -3.
 
-let a = 1;
-console.log(a > 0);
+// let a = 1;
+// console.log(a > 0);
 
-let d = 0;
-console.log(d > 0);
+// let d = 0;
+// console.log(d > 0);
 
-let b = -3;
-console.log(b > 0);
+// let b = -3;
+// console.log(b > 0);
 
 // 2 task - // Якщо змінна ="test" - виведіть true,
 //Перевірте це на варіантах 'test',"qwerty", true
@@ -102,17 +102,17 @@ console.log(s > 10 ? s - 5 : s + 5);  // Відняти 5, бо 13 більше 
 // 5 task - //Зробіть сервіс який отримує тризначне число
 //Поверніть користувачу сумму цих чисел
 
-const inputNumber = prompt("Введіть тризначне число:");
-const number = parseInt(inputNumber);
+// const inputNumber = prompt("Введіть тризначне число:");
+// const number = parseInt(inputNumber);
 
-if (!isNaN(number) && inputNumber.length === 3) {
-    const digit1 = parseInt(inputNumber[0]);
-    const digit2 = parseInt(inputNumber[1]);
-    const digit3 = parseInt(inputNumber[2]);
+// if (!isNaN(number) && inputNumber.length === 3) {
+//     const digit1 = parseInt(inputNumber[0]);
+//     const digit2 = parseInt(inputNumber[1]);
+//     const digit3 = parseInt(inputNumber[2]);
 
-    const sum = digit1 + digit2 + digit3;
+//     const sum = digit1 + digit2 + digit3;
 
-    alert(`Сума цифр тризначного числа ${number}: ${sum}`);
-} else {
-    alert("Введено некоректне тризначне число.");
-}
+//     alert(`Сума цифр тризначного числа ${number}: ${sum}`);
+// } else {
+//     alert("Введено некоректне тризначне число.");
+// }
