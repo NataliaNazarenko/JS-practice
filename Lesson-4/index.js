@@ -72,4 +72,42 @@ function showCancel() {
 
 ask("Yes or no?", showOk, showCancel);
 
+// hof
+
+const hello = function(name) {
+    console.log(`Hello ${name}!`);
+};
+
+const searchName = function(callback) {
+    const name = "Nata";
+    callback(name);
+};
+
+searchName(hello);
+
+function checkAge(age) {
+    if (age > 18) {
+        return console.log("Hello!");
+    };
+
+    return console.log("Good Bye!");
+};
+
+checkAge(12);
+checkAge(21);
+
+function showMovie(age) {
+    if (age > 21) {
+        return;
+    };
+
+    return console.log("Go to movie!");
+};
+
+showMovie(12);
+showMovie(35);
+
+// стрілкові
+
+
 
