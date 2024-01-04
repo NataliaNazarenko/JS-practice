@@ -118,3 +118,45 @@
 // kiwiInfo();
 
 // вбудовані методи call
+
+// const userInfo = {
+//     name: "name",
+//     age: 50,
+//     logInfo: function(job) {
+//         console.group(`${name} info`);
+//         console.log(`Name is ${this.name}`);
+//         console.log(`Age is ${this.age}`);
+//         console.log(`Job is ${job}`);
+//         console.groupEnd();
+//     },
+// };
+
+// const Natalia = {
+//     name: "Nata",
+//     age: 39,
+// };
+
+// userInfo.logInfo.call(Natalia, 'developer');
+
+// вбудовані методи apply
+
+const showUserInfo = {
+    name: "name",
+    age: 40,
+    logInfo: function(job, city) {
+        console.group(`${name} info`);
+        console.log(`Name is ${this.name}`);
+        console.log(`Age is ${this.age}`);
+        console.log(`Job is ${job}`);
+        console.log(`City is ${city}`);
+        console.groupEnd();
+    },
+};
+
+const Nata = {
+    name: "Nata",
+    age: 39,
+};
+
+showUserInfo.logInfo.call(Nata, 'developer', 'Lviv');
+showUserInfo.logInfo.apply(Nata, ['developer', 'Kyiv']);
