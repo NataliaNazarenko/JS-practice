@@ -140,23 +140,41 @@
 
 // вбудовані методи apply
 
-const showUserInfo = {
-    name: "name",
-    age: 40,
-    logInfo: function(job, city) {
-        console.group(`${name} info`);
-        console.log(`Name is ${this.name}`);
-        console.log(`Age is ${this.age}`);
-        console.log(`Job is ${job}`);
-        console.log(`City is ${city}`);
-        console.groupEnd();
-    },
+// const showUserInfo = {
+//     name: "name",
+//     age: 40,
+//     logInfo: function(job, city) {
+//         console.group(`${name} info`);
+//         console.log(`Name is ${this.name}`);
+//         console.log(`Age is ${this.age}`);
+//         console.log(`Job is ${job}`);
+//         console.log(`City is ${city}`);
+//         console.groupEnd();
+//     },
+// };
+
+// const Nata = {
+//     name: "Nata",
+//     age: 39,
+// };
+
+// showUserInfo.logInfo.call(Nata, 'developer', 'Lviv');
+// showUserInfo.logInfo.apply(Nata, ['developer', 'Kyiv']);
+
+// task 1
+
+const message = function(name, stars) {
+    console.log(`${name}, Welcome to ${this.hotel}, stars ${stars}`);
 };
 
-const Nata = {
-    name: "Nata",
-    age: 39,
-};
+const Bukovel = {hotel: 'Bukovel'};
+const Margo = {hotel: 'Margo'};
 
-showUserInfo.logInfo.call(Nata, 'developer', 'Lviv');
-showUserInfo.logInfo.apply(Nata, ['developer', 'Kyiv']);
+message.call(Bukovel, 'Nata', 5);
+message.call(Margo, 'Nata', 5);
+
+message.apply(Bukovel, ['Nata', 5]);
+message.apply(Margo, ['Nata', 5]);
+
+message.bind(Bukovel, 'Nata', 5)();
+message.bind(Margo, 'Nata', 5)();
