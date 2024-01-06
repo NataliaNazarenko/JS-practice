@@ -163,18 +163,67 @@
 
 // task 1
 
-const message = function(name, stars) {
-    console.log(`${name}, Welcome to ${this.hotel}, stars ${stars}`);
+// const message = function(name, stars) {
+//     console.log(`${name}, Welcome to ${this.hotel}, stars ${stars}`);
+// };
+
+// const Bukovel = {hotel: 'Bukovel'};
+// const Margo = {hotel: 'Margo'};
+
+// message.call(Bukovel, 'Nata', 5);
+// message.call(Margo, 'Nata', 5);
+
+// message.apply(Bukovel, ['Nata', 5]);
+// message.apply(Margo, ['Nata', 5]);
+
+// message.bind(Bukovel, 'Nata', 5)();
+// message.bind(Margo, 'Nata', 5)();
+
+// task 2
+
+const cart = {
+    showItems() {
+        console.log("This is", this.items);
+    },
 };
 
-const Bukovel = {hotel: 'Bukovel'};
-const Margo = {hotel: 'Margo'};
+const woman = {
+    items: ["shoes, jewelry, jacket"],
+};
 
-message.call(Bukovel, 'Nata', 5);
-message.call(Margo, 'Nata', 5);
+const man = {
+    items: ["shoes, audio, jacket"],
+};
 
-message.apply(Bukovel, ['Nata', 5]);
-message.apply(Margo, ['Nata', 5]);
+const kid = {
+    items: ["just, bucket, towel"],
+};
 
-message.bind(Bukovel, 'Nata', 5)();
-message.bind(Margo, 'Nata', 5)();
+document.querySelector("#wom").addEventListener("click", cart.showItems.bind(woman));
+
+document.querySelector("#man").addEventListener("click", cart.showItems.bind(man));
+
+document.querySelector("#kid").addEventListener("click", cart.showItems.bind(kid));
+
+// task 3
+
+const infoCar = {
+    name: "BMW",
+    model: "X5",
+    color: "black",
+    showInfo: function() {
+        console.log("Car: " + this.name + " model: " + this.model + " color: " + this.color);
+    },
+};
+
+infoCar.showInfo();
+
+newCar = {
+    name: "Opel",
+    model: "Astra",
+    color: "white",
+};
+
+infoCar.showInfo.bind(newCar)();
+infoCar.showInfo.call(newCar);
+infoCar.showInfo.apply(newCar);
