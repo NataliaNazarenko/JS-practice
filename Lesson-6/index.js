@@ -26,3 +26,29 @@ const sumCredit = {
 };
 
 console.log(sumCredit.result());
+
+// Клас - спосіб опису сутності, що визначає стан і поведінку, що залежить від цього
+// стану, а також правила для взаємодії з цією сутністю (контракт).
+
+class Bank {
+    static type = 'bank';
+    constructor(options) {
+        this.summa = options.summa;
+        this.month = options.month;
+        this.p = options.p;
+    };
+
+    credit() {
+        return console.log(this.summa + this.p * this.month);
+    };
+};
+
+const userBank = new Bank({
+    summa: 50000,
+    month: 24,
+    p: 1500,
+});
+
+userBank.credit();
+console.log(userBank.type); //undefined
+console.log(Bank.type);
