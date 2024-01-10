@@ -13,14 +13,14 @@
 // 2 task - // Якщо змінна ="test" - виведіть true,
 //Перевірте це на варіантах 'test',"qwerty", true
 
-let f = "test";
-console.log(f === "test");  // true
+// let f = "test";
+// console.log(f === "test");  // true
 
-let c = "qwerty";
-console.log(c === "test");  // false
+// let c = "qwerty";
+// console.log(c === "test");  // false
 
-let isTrue = true;
-console.log(isTrue === "test");  // false
+// let isTrue = true;
+// console.log(isTrue === "test");  // false
 
 // 3 task - // Якщо змінна більше 10 - відніміть 5,
 //менше - додайте 5, результат виведіть в консоль

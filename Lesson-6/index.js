@@ -30,25 +30,86 @@ console.log(sumCredit.result());
 // Клас - спосіб опису сутності, що визначає стан і поведінку, що залежить від цього
 // стану, а також правила для взаємодії з цією сутністю (контракт).
 
-class Bank {
-    static type = 'bank';
-    constructor(options) {
-        this.summa = options.summa;
-        this.month = options.month;
-        this.p = options.p;
+// class Bank {
+//     static type = 'Privat';
+//     constructor(options) {
+//         this.summa = options.summa;
+//         this.month = options.month;
+//         this.p = options.p;
+//     };
+
+//     credit() {
+//         return console.log("I am Privat");
+//     };
+// };
+
+// const userBank = new Bank({
+//     summa: 50000,
+//     month: 24,
+//     p: 1500,
+// });
+
+// userBank.credit();
+// console.log(userBank.type); //undefined
+// console.log(Bank.type);
+
+// class newBank extends Bank {
+//     constructor(options) {
+//       super(options);
+//       this.card = options.card;
+//    };
+
+//    credit() {
+//     super.credit();
+//     return console.log("I am Aval");
+//    };
+// };
+
+// const userNewBank = new newBank({
+//     summa: 150000,
+//     month: 36,
+//     p: 2500,
+//     card: true,
+// });
+
+// console.log(userNewBank.card);
+// console.log(userNewBank.credit());
+
+// get and set 
+
+class User {
+    constructor(props) {
+        this.name = props.name;
     };
 
-    credit() {
-        return console.log(this.summa + this.p * this.month);
+    firstName = '';
+    lastName = '';
+    age = '';
+    city = '';
+
+    set name(newName) {
+        const newRow = newName.split(" ");
+        this.firstName = newRow[0];
+        this.lastName = newRow[1];
+    };
+
+    get name() {
+        return `First name : ${this.firstName} , Last name : ${this.lastName}`;
     };
 };
 
-const userBank = new Bank({
-    summa: 50000,
-    month: 24,
-    p: 1500,
+const newUserNata = new User({
+    name: 'Natalia Nazarenko',
 });
 
-userBank.credit();
-console.log(userBank.type); //undefined
-console.log(Bank.type);
+const newUserDasha = new User({
+    name: 'Dasha Heppy',
+});
+
+console.log(newUserNata);
+console.log(newUserDasha);
+
+// prototype
+
+const pr = [1, 2, 3];
+console.log(pr);
