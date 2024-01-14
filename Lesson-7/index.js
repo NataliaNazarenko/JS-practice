@@ -139,3 +139,24 @@ const circleOrange = new CirclItem({
 // об'єкта.
 // Object.valueOf() - повертає значення примітиву зазначеного об'єкта.
 // Object.watch() - додає точку спостереження (watchpoint) до властивості об'єкта.
+
+function Car(name, color) {
+    this.name = name;
+    this.color = color;
+};
+
+Car.prototype.message = function() {
+    console.log(`${this.name} is ${this.color} color`);
+};
+
+Car.prototype.start = function() {
+    console.log(`${this.name} started`);
+};
+
+const BMW = new Car('BMW', 'black');
+const Mercedes = new Car('Mercedes', 'white');
+
+BMW.message();
+Mercedes.message();
+BMW.start();
+Mercedes.start();
