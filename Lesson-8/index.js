@@ -158,3 +158,47 @@ console.log(elementLi);
 // CSS-клас.
 // document.getElementsByName(name) повертає елементи з заданим атрибутом
 // name для всього документа. Використовується дуже рідко.
+
+let elementDiv = document.getElementsByTagName('div');
+console.log(elementDiv);
+
+// Властивості
+// Під час побудови DOM-дерева багато стандартних HTML-атрибутів стають
+// властивостями вузлів. Подивимося на кілька властивостей, що часто
+// використовуються.
+// hidden – контролює видимість елемента.
+// value - містить поточний текстовий контент елементів input, select, textarea.
+// checked - зберігає стан чекбоксу чи радіокнопки.
+// name - зберігає значення, вказане в HTML-атрибуті name.
+// src – шлях до зображення тега <img>.
+
+let textHidden = document.getElementById('textHidden');
+console.log(textHidden);
+textHidden.hidden = true;
+
+let messageText = document.getElementById('message');
+console.log(messageText.value);
+
+let textLorem = document.querySelector('.text-lorem');
+console.log(textLorem.textContent);
+
+let textHello = document.querySelector('.text-hello');
+console.log(textHello.textContent);
+textHello.textContent = 'Hello, Oleg!';
+console.log(textHello.textContent);
+
+let btn = document.querySelector('.button');
+btn.style.backgroundColor = 'red';
+
+let textContent = document.querySelector('#p_text');
+console.log(textContent.classList);
+console.log(textContent.classList.contains('red'));
+textContent.classList.remove('red');
+console.log(textContent.classList.contains('red'));
+textContent.classList.add('green');
+console.log(textContent.classList.contains('green'));
+console.log(textContent.classList);
+
+let image = document.querySelector('.image');
+console.log(image.hasAttribute('src'));
+console.log(image.getAttribute('src'));
