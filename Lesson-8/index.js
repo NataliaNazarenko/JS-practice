@@ -109,8 +109,8 @@ console.log(elementLi);
 // <div id="elem-content">Елемент</div>
 // </div>
 // <script>
-// // отримати елемент let elem = document.getElementById('elem');
-// // зробити його фон червоним elem.style.background = 'red';
+// отримати елемент let elem = document.getElementById('elem');
+// зробити його фон червоним elem.style.background = 'red';
 // </script>
 // querySelectorAll
 // До сьогодні найуніверсальніший метод – це elem.querySelectorAll(css), він повертає всі
@@ -202,3 +202,100 @@ console.log(textContent.classList);
 let image = document.querySelector('.image');
 console.log(image.hasAttribute('src'));
 console.log(image.getAttribute('src'));
+
+// Створення елементу
+// Є два способи створення DOM вузлів:
+// document.createElement(tag)
+// Створює новий елемент з заданим тегом:
+// let div = document.createElement('div');
+// document.createTextNode(text)
+// Створює новий текстовий вузол з заданим текстом:
+// let textNode = document.createTextNode('От і я');
+// У більшості випадків нам потрібно створювати саме елементи, такі як div для
+// повідомлень.
+
+// Створення повідомлень
+// Створення div елементу для повідомлення складається з трьох кроків:
+// 1. Створіть елемент <div>
+// let div = document.createElement('div');
+// 2. Задайте йому клас "alert"
+// div.className = "alert";
+// 3. Наповніть <div> змістом
+// div.innerHTML = "<strong>Всім привіт!</strong> Ви прочитали важливе
+// повідомлення.";
+// Ми створили елемент, але поки що він знаходиться лише у змінній під назвою div,
+// а не на сторінці. Тому ми не можемо його побачити
+
+// Методи вставки
+// Щоб div показався нам потрібно вставити його десь на сторінці в document.
+// Наприклад, в елемент <body> який можна отримати звернувшись до
+// document.body.
+// Для цього існує спеціальний метод append: document.body.append(div).
+// Нижче наведено більше методів для вставки, вони вказують куди саме буде вставлено вміст:
+// node.append(...вузли або рядки) – додає вузли або рядки в кінець node,
+// node.prepend(...вузли або рядки) – вставляє вузли вбо рядки на початку node,
+// node.before(...вузли або рядки) – вставляє вузли або рядки попереду node,
+// node.after(...вузли або рядки) – вставляє вузли або рядки після node,
+// node.replaceWith(...вузли або рядки) – замінює node заданими вузлами або
+// рядками.
+
+// Але що, як нам потрібно вставити рядок HTML «як html», з усіма тегами та іншим,
+// в той самий спосіб як це робить elem.innerHTML?
+// Для цього ми можемо використовувати інший, досить універсальний метод:
+// elem.insertAdjacentHTML(куди, html).
+// Перший параметр це кодове слово, яке вказує куди вставляти відносно elem.
+// Його значенння має бути одним з наступних:
+// "beforebegin" – вставити html безпосередньо перед elem,
+// "afterbegin" – вставити html в elem, на початку,
+// "beforeend" – вставити html в elem, в кінці,
+// "afterend" – вставити html безпосередньо після elem.
+
+// Об'єкт містить методи для роботи з класами елемента.
+// elem.classList.contains(cls) - повертає true або false, залежно від того, чи є елемент
+// класу cls
+// elem.classList.add(cls) - додає клас cls до списку класів елемента
+// elem.classList.remove(cls) - видаляє клас cls зі списку класів елемента
+// elem.classList.replace(oldClass, newClass) - замінює існуючий клас на вказаний
+// elem.classList.toggle(cls) - якщо класу cls немає, додає його, якщо є, видаляє
+// DOM-елементам відповідають HTML-теги, які мають текстові атрибути. Доступ до
+// атрибутів здійснюється за допомогою стандартних методів. Ці методи працюють
+// із значенням, що знаходиться в HTML.
+// elem.hasAttribute(name) - перевіряє наявність аттрибута, повертає true чи false
+// elem.getAttribute(name) - отримує значення атрибуту та повертає його
+// elem.setAttribute(name, value) - встановлює атрибут
+// elem.removeAttribute(name) - видаляє атрибут
+// elem.attributes - властивість, що повертає колекцію всіх атрибутів елемента
+
+const item = document.createElement('a');
+item.href = '#';
+item.classList.add('btn');
+item.textContent = '3';
+
+const nav = document.querySelector('.nav');
+nav.appendChild(item);
+
+const heading = document.createElement('h1');
+heading.textContent = 'Bye!';
+
+const contanier = document.querySelector('.contanier');
+contanier.insertBefore(heading, nav);
+
+// nav.removeChild(item);
+
+item.remove();
+
+const textClone = document.querySelector('.text-clone');
+const parent = document.querySelector('.parent');
+const clone = textClone.cloneNode(true);
+parent.appendChild(clone);
+
+const wrapper = document.querySelector('.wrapper');
+const newText = `<p>Not, The end</p>`;
+wrapper.innerHTML = newText;
+contanier.innerHTML += newText;
+
+const list = document.querySelector('#list');
+list.insertAdjacentHTML("beforebegin", "<p>beforebegin</p>");
+list.insertAdjacentHTML('afterbegin', '<li>afterbegin</li>');
+list.insertAdjacentHTML('beforeend', '<li>beforeend</li>');
+list.insertAdjacentHTML('afterend', '<p>afterend</p>');
