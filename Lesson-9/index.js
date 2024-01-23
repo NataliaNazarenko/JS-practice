@@ -123,3 +123,56 @@ addBtn.addEventListener('click', () => {
 removeBtn.addEventListener('click', () => {
     clickBtn.removeEventListener('click', handleClick);
 });
+
+const clickBtnNew = document.querySelector('#click-btn');
+const infoClick = (event) => {
+console.log(event);
+console.log(event.type);
+console.log(event.target);
+};
+clickBtnNew.addEventListener('click', infoClick);
+
+// Форми: подія та метод submit
+// Подія submit ініціюється, коли форма надсилається. Зазвичай це
+// використовується для перевірки форми перед відправкою на сервер або щоб
+// запобігти її відправленню та обробці в JavaScript.
+// Метод form.submit() дозволяє ініціювати відправку форми за допомогою
+// JavaScript. Ми можемо використовувати його для динамічного створення та
+// надсилання власних форм на сервер.
+// Подія submit
+// Виникає під час відправлення форми. Його застосовують для валідації форми
+// форми перед відправкою. Щоб відправити форму, відвідувач має два способи:
+// Натиснути кнопку з type="submit"
+// Натиснути клавішу Enter, перебуваючи в якомусь полі форми
+// Хоч би який спосіб вибрав відвідувач – буде згенеровано подію submit. В
+// обробнику цієї події можна перевірити дані та виконати дії за результатами
+// перевірки.
+// Метод: submit
+// Щоб надіслати форму на сервер вручну, ми можемо викликати form.submit().
+// Тоді подія submit не генерується. Передбачається, що якщо програміст викликає
+// form.submit(), то сценарій вже здійснив всю пов’язану обробку.
+// Іноді це використовується для створення та надсилання форми вручну, наприклад:
+// let form = document.createElement('form');
+// form.action = 'https://google.com/search';
+// form.method = 'GET';
+// form.innerHTML = '<input name="q" value="Тест">';
+// форма повинна бути в документі, щоб її надіслати
+// document.body.append(form);
+// form.submit();
+
+const form = document.querySelector('.form');
+const loginInput = form.querySelector('input[type="text"]');
+const passwordInput = form.querySelector('input[type="password"]');
+
+form.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+    event.preventDefault();
+    const login = loginInput;
+    console.log(login);
+    console.log(login.value);
+    const password = passwordInput;
+    console.log(password);
+    console.log(password.value);
+    form.reset();
+};

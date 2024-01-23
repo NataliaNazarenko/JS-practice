@@ -8,3 +8,13 @@
     width: 80px;
     height: 80px;
 }
+
+.form {
+    margin: 0 auto;
+    text-align: center;
+    padding: 32px;
+}
+
+.input {
+    margin: 10px;
+}
