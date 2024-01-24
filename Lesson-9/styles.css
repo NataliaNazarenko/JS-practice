@@ -18,3 +18,27 @@
 .input {
     margin: 10px;
 }
+
+.parent, .child, .item {
+    margin: 30px;
+    padding: 10px;
+    outline: 1px solid green;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.liItem {
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid blue;
+}
+
+.liItem.active {
+  background-color: aqua;
+}
