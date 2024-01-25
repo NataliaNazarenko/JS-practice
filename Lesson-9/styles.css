@@ -42,3 +42,12 @@
 .liItem.active {
   background-color: aqua;
 }
+
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    z-index: 20;
+    position: absolute;
+}
