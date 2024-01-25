@@ -334,3 +334,46 @@ function handleClickNav(event) {
         event.target.classList.add('active');
     };
 };
+
+// Drag'n'Drop з подіями миші
+// Drag’n’Drop – відмінний спосіб поліпшити інтерфейс. Захоплення елементу
+// мишкою і його перенесення візуально спростять що завгодно: від копіювання і
+// переміщення документів (як у файлових менеджерах) до оформлення
+// замовлення (“покласти до кошику”).
+// У сучасному стандарті HTML5 є розділ про Drag and Drop – який містить спеціальні
+// події саме для Drag’n’Drop перенесення, такі як dragstart, dragend та інші.
+// Ці події дозволяють нам підтримувати спеціальні види drag’n’drop, наприклад,
+// обробляти перенесення файлу з файлового менеджера ОС у вікно браузеру.
+// Після чого JavaScript може отримати доступ до вмісту таких файлів.
+// Але у браузерних подій Drag Events є обмеження. Наприклад, ми не можемо
+// заборонити перенесення з певної області. Також ми не можемо зробити
+// перенесення тільки “горизонтальним” або тільки “вертикальним”. І є багато інших
+// завдань по перетяганню, які не можуть бути виконані за їх допомогою. Крім того,
+// підтримка таких подій на мобільних пристроях дуже низька.
+// Drag’n’Drop алгоритм
+// Наш алгоритм Drag’n’Drop виглядає таким чином:
+// На mousedown – підготувати елемент до переміщення, якщо це необхідно
+// (наприклад, створити його клон, додати до нього клас або щось ще).
+// Потім, на mousemove перемістити його, змінивши значення left/top при
+// позиціюванні position: absolute.
+// На mouseup – виконати усі дії, пов’язані із завершенням перенесення.
+
+const ball = document.querySelector('.ball');
+
+ball.onmousedown = function(event) {
+    function move(pageX, pageY) {
+        ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
+        ball.style.top = pageY - ball.offsetWidth / 2 + 'px';
+    };
+    move(event.pageX, event.pageY);
+
+    function onMouseMove(event) {
+        move(event.pageX, event.pageY);
+    };
+
+    document.addEventListener('mousemove', onMouseMove);
+
+    ball.onmouseup = function() {
+        document.removeEventListener('mousemove', onMouseMove);
+    };
+};
