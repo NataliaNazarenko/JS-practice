@@ -74,6 +74,28 @@
         Онлайн валідатор https://jsonlint.com/
         </p>
         <h2>Метод JSON.stringify(obj)</h2>
+        <p>Щоб використовувати JSON.stringify(), просто передайте JavaScript-об'єкт, який
+            потрібно перетворити на JSON.
+            const user = {
+            name: 'Ivan',
+            age: 30,
+            city: "Lviv",
+            };
+            const dogJSON = JSON.stringify(user);
+            console.log(userJSON); // {"name":"Ivan","age":30,"city":"Lviv"}
+            JSON.stringify(dog) взяв об'єкт user і перетворив його на рядок. Цей рядок тепер
+            валідний JSON і може бути збережений у файл або передано по мережі
+        </p>
+        <h2>Метод JSON.parse(string)</h2>
+        <p>Щоб отримати JavaScript-об'єкт із JSON, ви повинні розібрати (розпарсувати)
+            його, операція зворотна stringify.
+            const json = '{"name":"Ivan",
+            "age":30,
+            "city":"Lviv"}';
+            const user = JSON.parse(json);
+            console.log(user);
+            Тепер коли user є звичайним JavaScript-об'єктом, його можна використовувати.
+        </p>
     <script src="./index.js"></script>
     <script src="./hw10.js"></script>
 </body>
