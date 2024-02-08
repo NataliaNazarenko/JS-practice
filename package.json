@@ -1,5 +1,20 @@
 {
   "dependencies": {
     "uuid": "^9.0.1"
-  }
+  },
+  "name": "js-practice",
+  "description": "Цей репозиторій містить уроки по основах JavaScript для новачків.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "build": "npx webpack --mode production",
+    "start": "npx webpack --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
