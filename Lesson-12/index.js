@@ -63,3 +63,18 @@ const a = {
 
 a.classic();
 a.arrow();
+
+const data = new Date();
+console.log(data);
+
+const newData = new Date(2022, 0, 1, 0, 0, 0, 0);
+console.log(newData);
+
+const myData = new Date('2022-01-01');
+console.log(myData);
+
+const unixData = new Date(1200000);
+console.log(unixData);
+
+const newUnixData = Date.now();
+console.log(newUnixData);
