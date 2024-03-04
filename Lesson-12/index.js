@@ -78,3 +78,25 @@ console.log(unixData);
 
 const newUnixData = Date.now();
 console.log(newUnixData);
+
+const newDate = new Date();
+console.log(newDate.getTime());
+console.log(newDate.getMonth());
+console.log(newDate.getDay());
+console.log(newDate.getFullYear());
+console.log(newDate.getHours());
+console.log(newDate.getMinutes());
+console.log(newDate.getSeconds());
+console.log(newDate.getMilliseconds());
+
+const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+};
+
+const ukr = newDate.toLocaleString('uk', options);
+console.log(ukr);
