@@ -64,6 +64,8 @@ const a = {
 a.classic();
 a.arrow();
 
+//Date()
+
 const data = new Date();
 console.log(data);
 
@@ -100,3 +102,86 @@ const options = {
 
 const ukr = newDate.toLocaleString('uk', options);
 console.log(ukr);
+
+//Promise
+const promise = new Promise((resolve, reject) => {
+    // some async code
+    resolve('success');
+    reject('failed');
+});
+console.log(promise);
+
+promise
+.then((result) => {
+    console.log(result);
+})
+.catch((error) => {
+    console.log(error);
+});
+
+const promise2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('success');
+    }, 1000);
+});
+console.log(promise2);
+
+ promise2
+.then((result) => {
+    console.log(result);
+})
+.catch((error) => {
+    console.log(error);
+});
+
+const promise3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject('failed');
+    }, 1000);
+});
+console.log(promise3);
+
+promise3
+.then((result) => {
+    console.log(result);
+})
+.catch((error) => {
+    console.log(error);
+});
+
+let prom = new Promise(function(resolve, reject) {
+    setTimeout (() => (resolve('resolve'), 1000));
+    setTimeout (() => (reject('reject'), 1000));
+});
+
+prom.then(
+    (result) => console.log(result),
+    (error) => console.log(error)
+);
+
+prom.catch(alert);
+prom.finally;
+
+//task 1
+
+function load(src) {
+    return new Promise(function(resolve, reject) {
+        let script = document.createElement('script');
+        script.src = src;
+
+        script.onload = () => resolve(script);
+        script.onerror = () => reject(new Error(`Error loading ${src}`));
+
+        document.body.appendChild(script);
+    });
+};
+
+let newProm = load('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js');
+
+newProm.then(
+    (script) => console.log(`Done! ${script}`), 
+);
+newProm.catch(
+    (error) => console.log(`Error! ${error.message}`)
+);
+newProm.finally('I am always here');
