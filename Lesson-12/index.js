@@ -185,3 +185,22 @@ newProm.catch(
     (error) => console.log(`Error! ${error.message}`)
 );
 newProm.finally('I am always here');
+
+// task 2
+
+new Promise(function(resolve, reject) {
+    setTimeout(() => resolve(2), 1000);
+})
+.then(function(result) {
+    console.log(result);
+    return new Promise(function(resolve, reject) {
+        setTimeout(() => resolve(result + 3), 1000);
+    });
+})
+.then(function(result) {
+    console.log(result);
+})
+.catch(function(error) {
+    console.log(error);
+});
+
