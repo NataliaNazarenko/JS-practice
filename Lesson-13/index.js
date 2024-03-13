@@ -53,4 +53,12 @@ function deleteData() {
     })
     .then((response) => response.json())
     .then((json) => console.log(json));
-}
+};
+
+// async/await
+
+async function fetchData() {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+    const json = await response.json();
+    return console.log(json);
+};
