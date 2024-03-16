@@ -62,3 +62,36 @@ async function fetchData() {
     const json = await response.json();
     return console.log(json);
 };
+
+fetchData();
+
+async function a() {
+    let prom = new Promise(function(resolve, reject) {
+        setTimeout (() => (resolve('Hello'), 1000));
+    });
+
+    let result = await prom;
+    console.log(result);
+};
+
+a();
+
+const currency = async () => {
+    const response = await fetch("https://api.exchangerate.host/latest?base=USD");
+    if(response.ok) {
+        console.log('OK');
+        let = data = await response.json();
+        console.log(data);
+    } else {
+        console.log('Error', response.status);
+    };
+};
+
+currency();
+
+const headers = new Headers({
+    "Content-Type": "application/json",
+    "X-Custom-Header": "castom header value",
+});
+
+headers.has("Content-Type");
