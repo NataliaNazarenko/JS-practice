@@ -95,3 +95,36 @@ const headers = new Headers({
 });
 
 headers.has("Content-Type");
+
+const postTest = async () => {
+    let user = {
+        name: "John",
+        surname: "Smith",
+        age: 25
+    };
+
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user),
+    });
+};
+
+postTest().then(console.log('Done!'));
+
+try{
+    console.log('Start');
+    console.log('Finish');
+} catch (error) {
+    console.log(error);
+};
+
+try{
+    console.log('Start');
+    d;
+    console.log('Finish');
+} catch (error) {
+    console.log('Error');
+};
