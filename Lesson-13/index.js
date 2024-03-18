@@ -128,3 +128,65 @@ try{
 } catch (error) {
     console.log('Error');
 };
+
+setTimeout(function(){
+    try {
+        console.log("OK");
+    } catch (error) {
+        console.log('Error');
+    };
+}, 1000);
+
+try {
+    da;
+} catch (error) {
+    console.log(error.name);
+    console.log(error.message);
+    console.log(error.stack);
+};
+
+let json = ``
+try {
+    let data = JSON.parse(json);
+} catch (error) {
+    console.log(error.message);
+};
+
+let data = `{"name": "John", "age": 30}`;
+
+try {
+    let user = JSON.parse(data);
+    if(!user.city) {
+        throw new Error('No city');
+    };
+} catch (error) {
+    console.log(error.message);
+} finally {
+    console.log('Finally');
+};
+
+let socket = new WebSocket("wss://echo.websocket.org");
+
+socket.onopen = function(event) {
+    console.log("Connected");
+    socket.send("Hello");
+};
+
+socket.onmessage = function(event) {
+    console.log(event.data);
+};
+
+socket.onclose = function(event) {
+    if(event.wasClean) {
+        console.log('Connection closed', event.code);
+    } else {
+        console.log('Error');
+    };
+};
+
+socket.onerror = function(error) {
+    console.log(error.message);
+};
+
+
+
